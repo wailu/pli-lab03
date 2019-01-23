@@ -1,5 +1,7 @@
 package edu.nus.comp.pli
 
+import scala.math.sqrt
+
 /*
  * This file aims to help you with getting familiar with Scala.
  * To finish this tutorial, you need to fill up 20 functions.
@@ -159,8 +161,15 @@ object Lab03 {
      * 		isPrime (2) ==> true
      * 		isPrime (4) ==> false
      */
+    if (num <= 1) {
+      return false
+    }
 
-    false
+    if (num == 2) {
+      return true
+    }
+
+    new Range(2, sqrt(num).toInt, 1).toList.foldLeft (true) ((x, y) => x && num % y != 0)
   }
 
   def allPrimes(start:Int, end:Int):List [Int] = {
