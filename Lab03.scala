@@ -112,8 +112,8 @@ object Lab03 {
      * For example:
      * 	 removeDupl (List(1,1,2,2,1)) ==> List(1,2)
      */
-    List()
 
+    if (xs.length <= 1) xs else xs.head :: removeDupl(xs.tail.filter(_!=xs.head))
   }
 
   def findFirst[A] (fx: A => Boolean, xs:List[A]): Option [A] = {
