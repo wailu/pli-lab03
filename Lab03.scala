@@ -181,7 +181,7 @@ object Lab03 {
      * 		allPrimes (2, 10) ==> List(2, 3, 5, 7)
      */
 
-    List()
+    new Range(start, end , 1).toList.filter(isPrime(_))
   }
 
   def pfactors (num: Int):List [Int] = {
