@@ -191,7 +191,13 @@ object Lab03 {
      * 		pfactors (6)  ==> List(2,3))
      * 		pfactors (12) ==> List(2,2,3))
      */
-    List()
+
+    if (num == 1) {
+      return List()
+    }
+
+      val factor = allPrimes(1, num + 1).find(num % _ == 0).get
+      factor :: pfactors(num / factor)
   }
 
   def pfactorsM (num: Int):List [(Int, Int)] = {
