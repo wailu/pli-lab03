@@ -149,8 +149,8 @@ object Lab03 {
      * For example:
      * 		genPairs (3) ===> List((1,2), (2,1))
      */
-    List()
 
+    new Range(1, num, 1).toList.map(x => (x, num - x))
   }
 
   def isPrime(num:Int):Boolean = {
