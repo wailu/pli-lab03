@@ -91,8 +91,7 @@ object Lab03 {
      * 	last_two (List ()) ===> None
      */
 
-    None
-
+    Some(xs.takeRight(2).head)
   }
 
   def compress [A] (xs: List[A]) : List [A] = {
