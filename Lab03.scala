@@ -51,6 +51,7 @@ object Lab03 {
     println ("05): " + findLast  (((x:Int)  => x % 2 == 0), List(3,6,7,3,4,8,3,3,3)))// Some(8)
     println ("06): " + genPairs  (6) ) // List((1,5), (2,4), (3,3), (4,2), (5,1))
   }
+
   def testCasesNumbers ():Unit = {
     // There are 5 test cases for Numbers exercises
     println ("07): " + isPrime   (13))  // true
@@ -90,11 +91,9 @@ object Lab03 {
      * 	last_two (List ()) ===> None
      */
 
-     None
+    None
 
-    }
-
-
+  }
 
   def compress [A] (xs: List[A]) : List [A] = {
     /* # 02
@@ -108,245 +107,245 @@ object Lab03 {
 
   }
 
-   def removeDupl [A] (xs: List[A]) : List [A] = {
-      /* # 03
-       * Implement a function that would remove
-       * all duplicates in a list.
-       * For example:
-       * 	 removeDupl (List(1,1,2,2,1)) ==> List(1,2)
-       */
-      List()
+  def removeDupl [A] (xs: List[A]) : List [A] = {
+    /* # 03
+     * Implement a function that would remove
+     * all duplicates in a list.
+     * For example:
+     * 	 removeDupl (List(1,1,2,2,1)) ==> List(1,2)
+     */
+    List()
 
-    }
+  }
 
-   def findFirst[A] (fx: A => Boolean, xs:List[A]): Option [A] = {
-     /* # 04
-      * Implement a function that would return the
-      * first element in a list that satisfies a given predicate
-      * For example:
-      * 	 findFirst (((x:Int)  => x > 1), List(1,1,2,1,4,1))  ==> Some (2)
-      * 	 findFirst (((x:Int)  => x > 4), List(1,1,2,1,4,1))) ==> None
-      */
-     None
-
-
-   }
-
-   def findLast[A] (fx: A => Boolean, xs:List[A]): Option [A] = {
-     /* # 05
-      * Implement a function that would return the
-      * last element in a list that satisfies a given predicate
-      * For example:
-      * 	 findFirst (((x:Int)  => x > 1), List(1,1,2,1,4,1))  ==> Some (4)
-      * 	 findFirst (((x:Int)  => x > 4), List(1,1,2,1,4,1))) ==> None
-      */
-     None
+  def findFirst[A] (fx: A => Boolean, xs:List[A]): Option [A] = {
+    /* # 04
+     * Implement a function that would return the
+     * first element in a list that satisfies a given predicate
+     * For example:
+     * 	 findFirst (((x:Int)  => x > 1), List(1,1,2,1,4,1))  ==> Some (2)
+     * 	 findFirst (((x:Int)  => x > 4), List(1,1,2,1,4,1))) ==> None
+     */
+    None
 
 
-   }
+  }
 
-   def genPairs (num:Int):List [(Int, Int)] = {
-     /* # 06
-      * Given a number n>1, generate all possible
-      * pairs of positive numbers (a,b) such that n=a+b
-      * For example:
-      * 		genPairs (3) ===> List((1,2), (2,1))
-      */
-     List()
-
-   }
-
-   def isPrime(num:Int):Boolean = {
-     /* # 07
-      * Given a number n, return true if it is a prime number
-      * otherwise return false
-      * For example:
-      * 		isPrime (2) ==> true
-      * 		isPrime (4) ==> false
-      */
-
-     false
-   }
-
-   def allPrimes(start:Int, end:Int):List [Int] = {
-     /* # 08
-      * Given a range of integers by its lower and upper limit,
-      * construct a list of all prime numbers in that range.
-      * For example:
-      * 		allPrimes (10, 2) ==> List()
-      * 		allPrimes (2, 10) ==> List(2, 3, 5, 7)
-      */
-
-     List()
-   }
-
-   def pfactors (num: Int):List [Int] = {
-     /* # 09
-      * Given a number, return its prime factors.
-      * For example:
-      * 		pfactors (6)  ==> List(2,3))
-      * 		pfactors (12) ==> List(2,2,3))
-      */
-     List()
-   }
-
-   def pfactorsM (num: Int):List [(Int, Int)] = {
-     /* # 10
-      * Given a number, return a list of tuples, representing
-      * unique prime factors and their occurrences.
-      * For example:
-      * 		pfactorsM 6  ==> List((2,1), (3,1))
-      * 		pfactorsM 12 ==> List((2,2), (3,1))
-      */
-     List()
-   }
-
-   def goldbach (num : Int) : (Int, Int) = {
-     /* # 11
-      * Goldbach's conjecture says that every positive even number greater
-      * than 2 is the sum of two prime numbers. Example: 28 = 5 + 23. It is
-      * one of the most famous facts in number theory that has not been proved
-      * to be correct in the general case. It has been numerically confirmed
-      * up to very large numbers. Write a function to find the two prime
-      * numbers that sum up to a given even integer.
-      * For example:
-      * 		goldbach 4 ==> (2,2)
-      * 		goldbach 8 ==> (3,5)
-      */
-
-     (-1,-1)
-   }
+  def findLast[A] (fx: A => Boolean, xs:List[A]): Option [A] = {
+    /* # 05
+     * Implement a function that would return the
+     * last element in a list that satisfies a given predicate
+     * For example:
+     * 	 findFirst (((x:Int)  => x > 1), List(1,1,2,1,4,1))  ==> Some (4)
+     * 	 findFirst (((x:Int)  => x > 4), List(1,1,2,1,4,1))) ==> None
+     */
+    None
 
 
+  }
 
-   // Here is the definition of Trees
-   sealed trait Tree[A]
-   case class Leaf[A](value: A) extends Tree[A]
-   case class Node[A](value: A, left: Tree[A], right: Tree[A]) extends Tree[A]
+  def genPairs (num:Int):List [(Int, Int)] = {
+    /* # 06
+     * Given a number n>1, generate all possible
+     * pairs of positive numbers (a,b) such that n=a+b
+     * For example:
+     * 		genPairs (3) ===> List((1,2), (2,1))
+     */
+    List()
 
-   val rt1 = Node (1,(Node (3,(Leaf (4)),(Leaf( 5)))), Leaf (2))
+  }
+
+  def isPrime(num:Int):Boolean = {
+    /* # 07
+     * Given a number n, return true if it is a prime number
+     * otherwise return false
+     * For example:
+     * 		isPrime (2) ==> true
+     * 		isPrime (4) ==> false
+     */
+
+    false
+  }
+
+  def allPrimes(start:Int, end:Int):List [Int] = {
+    /* # 08
+     * Given a range of integers by its lower and upper limit,
+     * construct a list of all prime numbers in that range.
+     * For example:
+     * 		allPrimes (10, 2) ==> List()
+     * 		allPrimes (2, 10) ==> List(2, 3, 5, 7)
+     */
+
+    List()
+  }
+
+  def pfactors (num: Int):List [Int] = {
+    /* # 09
+     * Given a number, return its prime factors.
+     * For example:
+     * 		pfactors (6)  ==> List(2,3))
+     * 		pfactors (12) ==> List(2,2,3))
+     */
+    List()
+  }
+
+  def pfactorsM (num: Int):List [(Int, Int)] = {
+    /* # 10
+     * Given a number, return a list of tuples, representing
+     * unique prime factors and their occurrences.
+     * For example:
+     * 		pfactorsM 6  ==> List((2,1), (3,1))
+     * 		pfactorsM 12 ==> List((2,2), (3,1))
+     */
+    List()
+  }
+
+  def goldbach (num : Int) : (Int, Int) = {
+    /* # 11
+     * Goldbach's conjecture says that every positive even number greater
+     * than 2 is the sum of two prime numbers. Example: 28 = 5 + 23. It is
+     * one of the most famous facts in number theory that has not been proved
+     * to be correct in the general case. It has been numerically confirmed
+     * up to very large numbers. Write a function to find the two prime
+     * numbers that sum up to a given even integer.
+     * For example:
+     * 		goldbach 4 ==> (2,2)
+     * 		goldbach 8 ==> (3,5)
+     */
+
+    (-1,-1)
+  }
 
 
-   def countL[A] (tree: Tree[A]) : Int = {
 
-     /* # 12
-      * Write a function that would count the number of leaves
-      * in a given binary tree
-      * For example:
-      * 		countL (Leaf (0)) ==> 1
-      * 		countL (Node(0,(Leaf (0)),Node(0,Leaf( 0),Leaf (0)))) ==> 2
-      */
+  // Here is the definition of Trees
+  sealed trait Tree[A]
+  case class Leaf[A](value: A) extends Tree[A]
+  case class Node[A](value: A, left: Tree[A], right: Tree[A]) extends Tree[A]
 
-     -1
-
-   }
-
-   def prefixBT [A] (tree: Tree[A]):List [A]= {
-     /* # 13
-      * We can flatten a tree into a list in prefix fashion
-      * by putting value at node, then values of left subtreee,
-      * followed by values of right subtrees.
-      * For example:
-      * 		prefixBT (Node(4,Leaf (1), Leaf (2))) ==> List(4, 1, 2)
-      */
-     List()
-   }
-
-   def infixBT [A] (tree: Tree[A]):List [A]= {
-     /* # 14
-      * We can flatten a tree into a list in infix fashion
-      * by putting values of left subtreee, value at node,
-      * followed by values of right subtrees.
-      * For example:
-      * 		infixBT (Node(4,Leaf (1), Leaf (2))) ==> List(1, 4, 2)
-      */
-     List()
-   }
-
-   def perfectTree (num : Int) : Tree [Int] = {
-     /* # 15
-      * A tree is perfectly balanced if either it is a leaf
-      * or it is a node with two subtrees of the same height and also
-      * perfectly balanced. Write a function that takes a height
-      * value and then returning a perfect tree of that height with
-      * all its elements set to 1
-      * For example:
-      * 		perfectTree (2) ==> Node(1,Leaf(1),Leaf(1))
-      *
-      */
-     Leaf (-1)
-
-   }
-   def prod [A, B] (xs: List [A], ys:List [B]): List [(A,B)] = {
-     /* # 16
-      * Given two lists, return a list of all possible
-      * pairs of the two lists.
-      * For example
-      * 		  prod (List(1,2), List('a','b')) ===>
-      * 				List((1,a), (1,b), (2,a), (2,b))
-      * Use higher-order function 'map' to help you in this task.
-      */
+  val rt1 = Node (1,(Node (3,(Leaf (4)),(Leaf( 5)))), Leaf (2))
 
 
-     List()
-   }
+  def countL[A] (tree: Tree[A]) : Int = {
+
+    /* # 12
+     * Write a function that would count the number of leaves
+     * in a given binary tree
+     * For example:
+     * 		countL (Leaf (0)) ==> 1
+     * 		countL (Node(0,(Leaf (0)),Node(0,Leaf( 0),Leaf (0)))) ==> 2
+     */
+
+    -1
+
+  }
+
+  def prefixBT [A] (tree: Tree[A]):List [A]= {
+    /* # 13
+     * We can flatten a tree into a list in prefix fashion
+     * by putting value at node, then values of left subtreee,
+     * followed by values of right subtrees.
+     * For example:
+     * 		prefixBT (Node(4,Leaf (1), Leaf (2))) ==> List(4, 1, 2)
+     */
+    List()
+  }
+
+  def infixBT [A] (tree: Tree[A]):List [A]= {
+    /* # 14
+     * We can flatten a tree into a list in infix fashion
+     * by putting values of left subtreee, value at node,
+     * followed by values of right subtrees.
+     * For example:
+     * 		infixBT (Node(4,Leaf (1), Leaf (2))) ==> List(1, 4, 2)
+     */
+    List()
+  }
+
+  def perfectTree (num : Int) : Tree [Int] = {
+    /* # 15
+     * A tree is perfectly balanced if either it is a leaf
+     * or it is a node with two subtrees of the same height and also
+     * perfectly balanced. Write a function that takes a height
+     * value and then returning a perfect tree of that height with
+     * all its elements set to 1
+     * For example:
+     * 		perfectTree (2) ==> Node(1,Leaf(1),Leaf(1))
+     *
+     */
+    Leaf (-1)
+
+  }
+  def prod [A, B] (xs: List [A], ys:List [B]): List [(A,B)] = {
+    /* # 16
+     * Given two lists, return a list of all possible
+     * pairs of the two lists.
+     * For example
+     * 		  prod (List(1,2), List('a','b')) ===>
+     * 				List((1,a), (1,b), (2,a), (2,b))
+     * Use higher-order function 'map' to help you in this task.
+     */
 
 
-   // polymorphic rose tree
-   sealed trait roseTree[A]
-   case class NodeR[A] (value:A, list: List[roseTree[A]]) extends roseTree[A]
+    List()
+  }
 
-   val rt2 = NodeR (1, List ( NodeR (2,List()),NodeR (3,List(NodeR (4,List()))),NodeR (5,List())))
 
-   /* # 17
-    * We can flatten a rosetree into a list in prefix fashion
-    * by putting value at node, followed by values of each
-    * of the subtrees.
-    * Implement a first-order version of this prefixRT
-    * method without using any higher-order functions.
-    * For example:
-    * 		prefixRT (NodeR(4,List(NodeR (1,List()), NodeR (2,List()))))  ===>
-    * 		List(4, 1, 2)
-    * Below is a first-order implementation.
-    */
-   def prefixRT [A] (xs :roseTree[A] ) : List[A] = xs match{
-     case NodeR(v,res) => List (v) ::: comb_prefixRT (res)
-   }
+  // polymorphic rose tree
+  sealed trait roseTree[A]
+  case class NodeR[A] (value:A, list: List[roseTree[A]]) extends roseTree[A]
 
-   def comb_prefixRT [A] (xs : List[roseTree[A]] ) : List[A] = xs match{
-     case List() => List ()
-     case _ => prefixRT (xs.head) ::: comb_prefixRT (xs.tail)
-   }
+  val rt2 = NodeR (1, List ( NodeR (2,List()),NodeR (3,List(NodeR (4,List()))),NodeR (5,List())))
 
-   def prefixRTHO [A] (xs :roseTree[A] ) : List[A] = {
-     /* # 18
-      * write a higher-order counterpart for prefixRT
-      * Use higher-order function "foldRight" to help
-      * you in this method.
-      */
+  /* # 17
+   * We can flatten a rosetree into a list in prefix fashion
+   * by putting value at node, followed by values of each
+   * of the subtrees.
+   * Implement a first-order version of this prefixRT
+   * method without using any higher-order functions.
+   * For example:
+   * 		prefixRT (NodeR(4,List(NodeR (1,List()), NodeR (2,List()))))  ===>
+   * 		List(4, 1, 2)
+   * Below is a first-order implementation.
+   */
+  def prefixRT [A] (xs :roseTree[A] ) : List[A] = xs match{
+    case NodeR(v,res) => List (v) ::: comb_prefixRT (res)
+  }
 
-     List()
+  def comb_prefixRT [A] (xs : List[roseTree[A]] ) : List[A] = xs match{
+    case List() => List ()
+    case _ => prefixRT (xs.head) ::: comb_prefixRT (xs.tail)
+  }
 
-   }
-   def postfixRTHO [A] (xs :roseTree[A] ) : List[A] = {
-     /* # 19
-      * write a higher-order counterpart for postfixRT
-      * Use higher-order function 'foldRight' to help
-      * you in this method.
-      */
-     List()
+  def prefixRTHO [A] (xs :roseTree[A] ) : List[A] = {
+    /* # 18
+     * write a higher-order counterpart for prefixRT
+     * Use higher-order function "foldRight" to help
+     * you in this method.
+     */
 
-   }
+    List()
 
-   def string_of_RT[A] ( xs :roseTree[A] ) : String =  {
-     /* # 20
-      * Write a function which generates such a string representation
-      * for rose tree.
-      * which prints a list of items separated by comma.
-      */
-     "Empty"
+  }
+  def postfixRTHO [A] (xs :roseTree[A] ) : List[A] = {
+    /* # 19
+     * write a higher-order counterpart for postfixRT
+     * Use higher-order function 'foldRight' to help
+     * you in this method.
+     */
+    List()
 
-   }
+  }
+
+  def string_of_RT[A] ( xs :roseTree[A] ) : String =  {
+    /* # 20
+     * Write a function which generates such a string representation
+     * for rose tree.
+     * which prints a list of items separated by comma.
+     */
+    "Empty"
+
+  }
 
 
 }
