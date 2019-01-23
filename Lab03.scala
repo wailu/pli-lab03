@@ -102,8 +102,7 @@ object Lab03 {
        * 	compress (List(1,1,2,2,1)) ==> List(1,2,1)
        */
 
-    List()
-
+    if (xs.length <= 1) xs else xs.head :: compress(xs.tail.dropWhile(_==xs.head))
   }
 
   def removeDupl [A] (xs: List[A]) : List [A] = {
