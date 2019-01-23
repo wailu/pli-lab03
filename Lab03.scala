@@ -124,9 +124,8 @@ object Lab03 {
      * 	 findFirst (((x:Int)  => x > 1), List(1,1,2,1,4,1))  ==> Some (2)
      * 	 findFirst (((x:Int)  => x > 4), List(1,1,2,1,4,1))) ==> None
      */
-    None
 
-
+    xs.find(fx)
   }
 
   def findLast[A] (fx: A => Boolean, xs:List[A]): Option [A] = {
