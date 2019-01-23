@@ -196,8 +196,8 @@ object Lab03 {
       return List()
     }
 
-      val factor = allPrimes(1, num + 1).find(num % _ == 0).get
-      factor :: pfactors(num / factor)
+    val factor = allPrimes(1, num + 1).find(num % _ == 0).get
+    factor :: pfactors(num / factor)
   }
 
   def pfactorsM (num: Int):List [(Int, Int)] = {
