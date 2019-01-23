@@ -91,7 +91,7 @@ object Lab03 {
      * 	last_two (List ()) ===> None
      */
 
-    if (xs.takeRight(2).isEmpty) None else Some(xs.takeRight(2).head)
+    xs.takeRight(2).headOption
   }
 
   def compress [A] (xs: List[A]) : List [A] = {
