@@ -208,7 +208,10 @@ object Lab03 {
      * 		pfactorsM 6  ==> List((2,1), (3,1))
      * 		pfactorsM 12 ==> List((2,2), (3,1))
      */
-    List()
+
+    pfactors(num)
+      .foldLeft (removeDupl(pfactors(num)).map((_,0)): List[(Int, Int)]) ((x, y) =>
+                                                                       x.map(a => if (a._1 == y) (y, a._2 + 1) else a))
   }
 
   def goldbach (num : Int) : (Int, Int) = {
