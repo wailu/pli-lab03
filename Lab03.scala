@@ -1,7 +1,5 @@
 package edu.nus.comp.pli
 
-import scala.math.sqrt
-
 /*
  * This file aims to help you with getting familiar with Scala.
  * To finish this tutorial, you need to fill up 20 functions.
