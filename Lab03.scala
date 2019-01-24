@@ -249,8 +249,10 @@ object Lab03 {
      * 		countL (Node(0,(Leaf (0)),Node(0,Leaf( 0),Leaf (0)))) ==> 2
      */
 
-    -1
-
+    tree match {
+      case a: Leaf[A] => 1
+      case b: Node[A] => countL(b.left) + countL(b.right)
+    }
   }
 
   def prefixBT [A] (tree: Tree[A]):List [A]= {
