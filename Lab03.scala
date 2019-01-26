@@ -263,7 +263,11 @@ object Lab03 {
      * For example:
      * 		prefixBT (Node(4,Leaf (1), Leaf (2))) ==> List(4, 1, 2)
      */
-    List()
+
+    tree match {
+      case a: Leaf[A] => List(a.value)
+      case b: Node[A] => b.value :: prefixBT(b.left) ::: prefixBT(b.right)
+    }
   }
 
   def infixBT [A] (tree: Tree[A]):List [A]= {
