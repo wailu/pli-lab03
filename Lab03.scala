@@ -250,8 +250,8 @@ object Lab03 {
      */
 
     tree match {
-      case a: Leaf[A] => 1
-      case b: Node[A] => countL(b.left) + countL(b.right)
+      case Leaf(_) => 1
+      case Node(_, l, r) => countL(l) + countL(r)
     }
   }
 
