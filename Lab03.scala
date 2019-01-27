@@ -350,8 +350,9 @@ object Lab03 {
      * you in this method.
      */
 
-    List()
-
+    xs match {
+      case NodeR(v, li) => v :: li.foldRight (List(): List[A]) ((x: roseTree[A], y: List[A]) => prefixRTHO(x) ::: y)
+    }
   }
   def postfixRTHO [A] (xs :roseTree[A] ) : List[A] = {
     /* # 19
