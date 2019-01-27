@@ -302,6 +302,7 @@ object Lab03 {
       case _ => Node(1, perfectTree(num - 1), perfectTree(num - 1))
     }
   }
+
   def prod [A, B] (xs: List [A], ys:List [B]): List [(A,B)] = {
     /* # 16
      * Given two lists, return a list of all possible
@@ -312,8 +313,7 @@ object Lab03 {
      * Use higher-order function 'map' to help you in this task.
      */
 
-
-    List()
+    xs.flatMap(x => ys.map(y => (x,y)))
   }
 
 
