@@ -296,8 +296,11 @@ object Lab03 {
      * 		perfectTree (2) ==> Node(1,Leaf(1),Leaf(1))
      *
      */
-    Leaf (-1)
 
+    num match {
+      case 1 => Leaf(1)
+      case _ => Node(1, perfectTree(num - 1), perfectTree(num - 1))
+    }
   }
   def prod [A, B] (xs: List [A], ys:List [B]): List [(A,B)] = {
     /* # 16
