@@ -360,8 +360,10 @@ object Lab03 {
      * Use higher-order function 'foldRight' to help
      * you in this method.
      */
-    List()
 
+    xs match {
+      case NodeR(v, li) => li.foldRight (List(): List[A]) ((x: roseTree[A], y: List[A]) => postfixRTHO(x) ::: y) :+ v
+    }
   }
 
   def string_of_RT[A] ( xs :roseTree[A] ) : String =  {
