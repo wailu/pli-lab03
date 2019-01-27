@@ -278,7 +278,11 @@ object Lab03 {
      * For example:
      * 		infixBT (Node(4,Leaf (1), Leaf (2))) ==> List(1, 4, 2)
      */
-    List()
+
+    tree match {
+      case a: Leaf[A] => List(a.value)
+      case b: Node[A] => (infixBT(b.left) :+ b.value) ::: infixBT(b.right)
+    }
   }
 
   def perfectTree (num : Int) : Tree [Int] = {
