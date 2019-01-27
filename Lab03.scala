@@ -372,8 +372,10 @@ object Lab03 {
      * for rose tree.
      * which prints a list of items separated by comma.
      */
-    "Empty"
 
+    xs match {
+      case NodeR(v, li) => if (li.isEmpty) v.toString else v + (li.foldLeft("(") ((x,y) => x + string_of_RT(y) + ",") dropRight 1) + ")"
+    }
   }
 
 
