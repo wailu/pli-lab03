@@ -163,11 +163,7 @@ object Lab03 {
       return false
     }
 
-    if (num == 2) {
-      return true
-    }
-
-    new Range(2, num, 1).toList.foldLeft (true) ((x, y) => x && num % y != 0)
+    new Range(2, scala.math.sqrt(num).toInt + 1, 1).toList.foldLeft (true) ((x, y) => x && num % y != 0)
   }
 
   def allPrimes(start:Int, end:Int):List [Int] = {
