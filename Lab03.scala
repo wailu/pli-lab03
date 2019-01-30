@@ -187,13 +187,14 @@ object Lab03 {
      * 		pfactors (6)  ==> List(2,3))
      * 		pfactors (12) ==> List(2,2,3))
      */
+    val absNum = scala.math.abs(num)
 
-    if (num == 1) {
+    if (absNum <= 1) {
       return List()
     }
 
-    val factor = allPrimes(1, num + 1).find(num % _ == 0).get
-    factor :: pfactors(num / factor)
+    val factor = allPrimes(1, absNum + 1).find(absNum % _ == 0).get // it will have a factor if it is > 1
+    factor :: pfactors(absNum / factor)
   }
 
   def pfactorsM (num: Int):List [(Int, Int)] = {
