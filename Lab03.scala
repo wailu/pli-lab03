@@ -1,5 +1,7 @@
 package edu.nus.comp.pli
 
+import scala.collection.immutable.Range.Inclusive
+
 /*
  * This file aims to help you with getting familiar with Scala.
  * To finish this tutorial, you need to fill up 20 functions.
@@ -175,7 +177,7 @@ object Lab03 {
      * 		allPrimes (2, 10) ==> List(2, 3, 5, 7)
      */
 
-    new Range(start, end , 1).toList.filter(isPrime(_))
+    new Inclusive(start, end , 1).toList.filter(isPrime(_))
   }
 
   def pfactors (num: Int):List [Int] = {
