@@ -165,7 +165,7 @@ object Lab03 {
       return false
     }
 
-    new Range(2, scala.math.sqrt(num).toInt + 1, 1).toList.foldLeft (true) ((x, y) => x && num % y != 0)
+    new Inclusive(2, scala.math.sqrt(num).toInt, 1).toList.foldLeft (true) ((x, y) => x && num % y != 0)
   }
 
   def allPrimes(start:Int, end:Int):List [Int] = {
