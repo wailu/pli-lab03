@@ -268,8 +268,8 @@ object Lab03 {
      */
 
     tree match {
-      case a: Leaf[A] => List(a.value)
-      case b: Node[A] => b.value :: prefixBT(b.left) ::: prefixBT(b.right)
+      case Leaf(a) => List(a)
+      case Node(v , l, r) => v :: prefixBT(l) ::: prefixBT(r)
     }
   }
 
