@@ -283,8 +283,8 @@ object Lab03 {
      */
 
     tree match {
-      case a: Leaf[A] => List(a.value)
-      case b: Node[A] => (infixBT(b.left) :+ b.value) ::: infixBT(b.right)
+      case Leaf(a) => List(a)
+      case Node(v, l, r) => (infixBT(l) :+ v) ::: infixBT(r)
     }
   }
 
