@@ -224,6 +224,10 @@ object Lab03 {
      * 		goldbach 8 ==> (3,5)
      */
 
+    if (num % 2 != 0) {
+      return (0, 0)
+    }
+
     val listOfPrimes = allPrimes(1, num)
     listOfPrimes.flatMap(x => listOfPrimes.map((x, _)): List[(Int, Int)]).filter(x => x._1 + x._2 == num).head
   }
